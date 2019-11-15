@@ -1,0 +1,18 @@
+// RALEWAY
+@include font-face(Raleway, normal, 100, '../fonts/raleway-v14-latin-100');
+@include font-face(Raleway, normal, 400, '../fonts/raleway-v14-latin-regular');
+@include font-face(Raleway, normal, 700, '../fonts/raleway-v14-latin-700');
+@include font-face(Raleway, normal, 900, '../fonts/raleway-v14-latin-900');
+// MONTSERRAT
+@include font-face(
+  Montserrat,
+  normal,
+  400,
+  '../fonts/montserrat-v14-latin-regular'
+);
+@include font-face(
+  Montserrat,
+  normal,
+  700,
+  '../fonts/montserrat-v14-latin-700'
+);

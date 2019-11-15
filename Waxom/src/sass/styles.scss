@@ -1,0 +1,14 @@
+//Utils
+@import 'helpers/variables';
+@import 'helpers/placeholders';
+@import 'helpers/mixins';
+@import 'helpers/smart-grid';
+//Base styles
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/base';
+//Components
+@import 'components/header';
+@import 'components/slider';
+@import 'components/services';
+@import 'components/advertise';

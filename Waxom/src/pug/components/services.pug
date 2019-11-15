@@ -1,0 +1,19 @@
+mixin services(icon, title)
+  .services
+    svg.services__icon
+      use(href=`images/icons/sprite.svg#${icon}`)
+    p.services__title
+      =title
+    p.services__description.
+      Lorem ipsum dolor sit amet, adipiscing elit,
+      sed diam nonummy nibh euismod tincidunt ut laoreet.  
+
+
+section.service-section
+  .container
+    h1.visually-hidden About Services
+    .row
+      +services('pencil', 'Web & App Design')
+      +services('layers', 'Development')
+      +services('gear', 'Customization')
+      +services('folder', 'Marketing')

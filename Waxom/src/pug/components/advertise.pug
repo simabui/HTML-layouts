@@ -1,0 +1,19 @@
+mixin browserImg(position)
+  img.browser__image(class=`browser__image-${position}`
+    src=`images/browser/browser-${position}-small.png` alt=`browser-${position}`
+    srcset=`\
+    images/browser/browser-${position}.png 770w,\
+    images/browser/browser-${position}-medium.png 577w,\
+    images/browser/browser-${position}-small.png 385w`
+    sizes="(max-width: 560px) 100vw, 50vw")
+
+section.section-advertise
+  .container
+    h2.section-advertise__title Waxom is Realization of your Ideas.
+    p.section-advertise__description.
+      Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+      Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+    .browser
+      +browserImg('center')
+      +browserImg('left')
+      +browserImg('right')

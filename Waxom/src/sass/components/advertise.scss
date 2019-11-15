@@ -1,0 +1,57 @@
+.section-advertise {
+  padding-top: 42px;
+  background-color: #fbfaf8;
+  text-align: center;
+
+  &__title {
+    @include md(font-size, 20px);
+    font-family: $raleway-font;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+
+  &__description {
+    @include md(padding, 0 100px);
+    @include md(padding, 0);
+    font-family: $montserrat-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2;
+    padding: 0 200px;
+  }
+}
+
+// BROWSER IMAGE
+
+.browser {
+  margin-top: 30px;
+  @include row-flex();
+  position: relative;
+
+  &__image {
+    @include col();
+    @include size-md(6);
+    @include size-xs(12);
+    @include md(position, static);
+    position: absolute;
+  }
+
+  &__image-center {
+    z-index: 999;
+    position: static;
+    margin: 0 auto;
+  }
+
+  &__image-left {
+    z-index: 998;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__image-right {
+    z-index: 998;
+    right: 0;
+    bottom: 0;
+  }
+}

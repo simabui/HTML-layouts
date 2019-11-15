@@ -1,0 +1,99 @@
+header {
+  @include xs(padding-bottom, 250px);
+  padding-top: 19px;
+  padding-bottom: 287px;
+  position: relative;
+
+  .row {
+    @include center-flex($type: 'ver');
+  }
+  @include bg-image('../images/mountain@1x.png');
+}
+
+// LOGO
+.logo {
+  @include col();
+  @include size(1);
+  @include size-lg(1);
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+
+  &__icon {
+    @include md(width, 59px);
+    @include md(height, 35px);
+    width: 65px;
+    height: 57px;
+  }
+
+  &__text {
+    @include md(font-size, 20px);
+    font-family: $raleway-font;
+    font-size: 34px;
+    font-weight: 400;
+    color: $white-color;
+  }
+}
+
+// MENU
+.navigation {
+  @include col();
+  @include size(6);
+  @include size-lg(6);
+  @include size-md(7);
+  @include xs(display, none);
+
+  &__list {
+    @include row-flex();
+    justify-content: space-around;
+  }
+
+  &__item a {
+    @include md(font-size, 11px);
+    font-family: $raleway-font;
+    font-weight: 400;
+    color: $white-color;
+    transition: color 0.2s linear;
+  }
+
+  &__item a:hover {
+    color: $secondary-color;
+  }
+}
+
+// SHOP ICONS
+.shop {
+  @include row-flex();
+  @include col();
+  @include size(1);
+  @include size-md(2);
+  @include size-xs(7);
+  @include md(justify-content, space-around);
+  justify-content: space-between;
+
+  &__icon {
+    @include md(height, 20px);
+    width: 19px;
+    height: 27px;
+  }
+
+  &__link {
+    svg {
+      fill: $white-color;
+      transition: fill 0.2s linear;
+    }
+  }
+
+  &__link:hover {
+    svg {
+      fill: $secondary-color;
+    }
+  }
+}
+
+// RETINA
+@media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  header {
+    @include bg-image('../images/mountain@2x.png');
+  }
+}

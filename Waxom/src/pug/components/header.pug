@@ -1,0 +1,40 @@
+.container
+  .row
+    a.logo(href="#")
+      svg.logo__icon
+        use(href="images/icons/sprite.svg#logos")
+      .logo__text
+        | Waxom    
+    nav.navigation
+      ul.navigation__list
+        each n in ['Home', 'Portfolio','Features', 'Blog', 'Pricing', 'Shortcodes', 'Contact']
+          li.navigation__item
+            a(href="#")=n
+    div.shop
+      a.shop__link(href="#")
+        svg.shop__icon
+          use(href="images/icons/sprite.svg#icon-cart")
+      a.shop__link(href="#")
+        svg.shop__icon
+          use(href="images/icons/sprite.svg#icon-search")
+  .slider
+    span.slider__header
+      | Unique and Modern Design
+    h1.slider__title
+      | Portfolio PSD Template
+    p.slider__description.
+      Nam liber tempor cum soluta nobis eleifend option congue nihil
+      imperdiet doming id quod mazim placerat facer possim assum.
+    a(href="#")
+      button.button.slider__button(type="button") Get Started
+    div.arrow.arrow-left
+      a(href="#") <  
+    div.arrow.arrow-right
+      a(href="#") >   
+  .bullets
+    span.bullets__page
+    span.bullets__page
+    span.bullets__page
+    span.bullets__page
+    span.bullets__page
+
