@@ -1,0 +1,54 @@
+.section-purchase {
+  background: linear-gradient(to right, #251d1b, #4b3226);
+  padding: 25px 0;
+}
+
+.purchase {
+  @include row-flex();
+
+  &__text {
+    @include col();
+    @include size(10);
+    @include size-lg(9);
+    @include size-md(8);
+    @include size-xs(12);
+    @include sm(text-align, center);
+    font-family: $raleway-font;
+
+    &-title {
+      @include md(font-size, 20px);
+      font-size: 28px;
+      color: $white-color;
+      font-weight: 400;
+
+      .first-word {
+        color: $main-color;
+      }
+    }
+
+    &-description {
+      @include sm(font-size, 14px);
+      @include sm(margin, 10px 0);
+      font-size: 18px;
+      font-weight: 400;
+      color: #615855;
+      line-height: 1.5;
+    }
+  }
+
+  &__button {
+    @include col();
+    @include size(2);
+    @include size-lg(3);
+    @include size-md(4);
+    @include size-xs(12);
+    @include sm(text-align, center);
+
+    button {
+      @include md(font-weight, 400);
+      @include md(padding, 10px 15px);
+      padding: 15px 22px;
+      background-color: #998675;
+    }
+  }
+}
