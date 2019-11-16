@@ -125,7 +125,11 @@
       transition: all 0.2s linear;
     }
   }
-
+  // BUTTON
+  &-button {
+    padding: 15px 34px;
+    background-color: $button-color;
+  }
   // SVG ICONS
 
   &-icon {
