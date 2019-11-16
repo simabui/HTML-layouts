@@ -506,10 +506,10 @@ header {
   padding-bottom: 287px;
   position: relative;
   background-image: url("../images/mountain@1x.png");
-  background-color: rgba(9, 9, 9, 0.9);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: rgba(9, 9, 9, 0.9);
 }
 
 header .row {
@@ -742,19 +742,20 @@ header .row {
   text-align: center;
 }
 
-.section-advertise__title {
+.section__title {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 30px;
   margin-bottom: 18px;
 }
 
-.section-advertise__description {
+.section__description {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 2;
   padding: 0 200px;
+  color: #555555;
 }
 
 .browser {
@@ -843,6 +844,187 @@ header .row {
   background-color: #998675;
 }
 
+.section-projects {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.section-projects .section__description {
+  margin-bottom: 29px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 608px;
+  margin: 0 auto;
+}
+
+.menu__list {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #555555;
+  border: 1px solid #ebebeb;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.menu__list:hover {
+  background-color: #998675;
+  color: #ffffff;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 20px;
+}
+
+.project__list {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(33.33333% - 30px);
+  margin-bottom: 15px;
+}
+
+.project__list:hover .project__image {
+  background-blend-mode: darken;
+  background-color: rgba(9, 9, 9, 0.7);
+}
+
+.project__list:hover .project__image-links {
+  display: flex;
+}
+
+.project__list:hover .project__text {
+  background-color: #362f2d;
+}
+
+.project__list:hover .project__text::before {
+  border-bottom: 20px solid #362f2d;
+}
+
+.project__list:hover .project__text-title {
+  color: #ffffff;
+}
+
+.project__list:hover .project__text-description {
+  color: #c7b299;
+}
+
+.project__image {
+  height: 238px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+
+.project__image-links {
+  display: none;
+  justify-content: space-between;
+  flex-basis: 83px;
+}
+
+.project__text {
+  background-color: #fbfaf8;
+  text-align: left;
+  padding: 15px 0 15px 16px;
+  position: relative;
+  transition: background-color 0.2s linear;
+}
+
+.project__text-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #c7b299;
+  margin-bottom: 14px;
+}
+
+.project__text-description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #d1d1d1;
+}
+
+.project__text::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #fbfaf8;
+  position: absolute;
+  top: -40%;
+  transition: all 0.2s linear;
+}
+
+.project-icon {
+  width: 27px;
+  height: 27px;
+}
+
+.project-icon use {
+  fill: #ffffff;
+  transition: all 0.2s linear;
+}
+
+.project-icon:hover use {
+  fill: #c7b299;
+}
+
+.first-image {
+  background-image: url("/images/projects/first-photo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.second-image {
+  background-image: url("/images/projects/second-photo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.third-image {
+  background-image: url("/images/projects/third-photo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fourth-image {
+  background-image: url("/images/projects/fourth-photo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fifth-image {
+  background-image: url("/images/projects/fifth-photo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sixth-image {
+  background-image: url("/images/projects/sixth-photo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media screen and (max-width: 1100px) {
   .logo {
     width: calc(8.33333% - 30px);
@@ -926,15 +1108,15 @@ header .row {
     width: calc(50% - 30px);
   }
 
-  .section-advertise__title {
+  .section__title {
     font-size: 20px;
   }
 
-  .section-advertise__description {
+  .section__description {
     padding: 0 100px;
   }
 
-  .section-advertise__description {
+  .section__description {
     padding: 0;
   }
 
@@ -964,6 +1146,10 @@ header .row {
 
   .purchase__button button {
     padding: 10px 15px;
+  }
+
+  .project__list {
+    width: calc(50% - 30px);
   }
 }
 
@@ -1034,6 +1220,14 @@ header .row {
   .purchase__button {
     width: calc(100% - 30px);
   }
+
+  .menu {
+    display: none;
+  }
+
+  .project__list {
+    width: calc(100% - 30px);
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -1045,7 +1239,6 @@ header .row {
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   header {
     background-image: url("../images/mountain@2x.png");
-    background-color: rgba(9, 9, 9, 0.9);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

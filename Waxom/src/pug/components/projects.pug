@@ -1,0 +1,35 @@
+mixin project-list(image, projectTitle, projectDesc)
+  li.project__list
+    .project__image(class=`${image}-image`)
+      .project__image-links
+        a(href="#")
+          svg.project-icon
+            use(href="images/icons/sprite.svg#link")
+        a(href="#")    
+          svg.project-icon
+            use(href="images/icons/sprite.svg#magnifier")
+    .project__text
+      p.project__text-title 
+        =projectTitle 
+      p.project__text-description
+        =projectDesc
+
+section.section-projects
+  .container
+    h2.section__title Our Latest Projects.
+    p.section__description.
+      Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+      Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+    ul.menu
+      each n in ['All', 'Web Design','Mobile App', 'Illustration', 'Photography']
+        li.menu__list
+          =n
+    ul.project
+      +project-list('first','Claritas Etiam Processus','Photography, Nature')
+      +project-list('second','Claritas Etiam Processus','Photography, Nature')
+      +project-list('third','Claritas Etiam Processus','Photography, Nature')
+      +project-list('fourth','Claritas Etiam Processus','Photography, Nature')
+      +project-list('fifth','Claritas Etiam Processus','Photography, Nature')
+      +project-list('sixth','Claritas Etiam Processus','Photography, Nature')
+
+

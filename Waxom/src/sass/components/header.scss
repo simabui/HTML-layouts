@@ -8,6 +8,7 @@ header {
     @include center-flex($type: 'ver');
   }
   @include bg-image('../images/mountain@1x.png');
+  background-color: rgba(9, 9, 9, 0.9);
 }
 
 // LOGO

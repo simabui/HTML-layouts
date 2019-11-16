@@ -1,0 +1,149 @@
+.section-projects {
+  padding: 40px 0;
+  text-align: center;
+
+  .section__description {
+    margin-bottom: 29px;
+  }
+}
+
+// MENU
+.menu {
+  @include xs(display, none);
+
+  display: flex;
+  justify-content: space-between;
+  width: 608px;
+  margin: 0 auto;
+
+  &__list {
+    font-family: $montserrat-font;
+    font-weight: 400;
+    color: $main-color;
+    border: 1px solid #ebebeb;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+
+    // HOVER EFFECT
+    &:hover {
+      background-color: #998675;
+      color: $white-color;
+    }
+  }
+}
+
+// PROJECT
+
+.project {
+  @include row-flex();
+  margin-top: 20px;
+
+  &__list {
+    @include col();
+    @include size(4);
+    @include size-md(6);
+    @include size-xs(12);
+    margin-bottom: 15px;
+
+    // HOVER
+    &:hover {
+      .project__image {
+        background-blend-mode: darken;
+        background-color: rgba(9, 9, 9, 0.7);
+
+        &-links {
+          display: flex;
+        }
+      }
+
+      .project__text {
+        background-color: $background-color;
+
+        &::before {
+          border-bottom: 20px solid $background-color;
+        }
+
+        &-title {
+          color: $white-color;
+        }
+
+        &-description {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  //PROJECT IMAGE
+  &__image {
+    height: 238px;
+    display: flex;
+    @include center-flex();
+    transition: all 0.2s linear;
+    // SVG LINKS
+    &-links {
+      display: none;
+      justify-content: space-between;
+      flex-basis: 83px;
+    }
+  }
+  // PROJECT TEXT
+  &__text {
+    background-color: #fbfaf8;
+    text-align: left;
+    padding: 15px 0 15px 16px;
+    position: relative;
+    transition: background-color 0.2s linear;
+
+    &-title {
+      font-family: $raleway-font;
+      font-weight: 400;
+      font-size: 20px;
+      color: $secondary-color;
+      margin-bottom: 14px;
+    }
+
+    &-description {
+      font-family: $montserrat-font;
+      font-weight: 400;
+      color: #d1d1d1;
+    }
+    // TRIANGLE
+    &::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      background-color: transparent;
+      border-top: 20px solid transparent;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid #fbfaf8;
+      position: absolute;
+      top: -40%;
+      transition: all 0.2s linear;
+    }
+  }
+
+  // SVG ICONS
+
+  &-icon {
+    width: 27px;
+    height: 27px;
+
+    use {
+      fill: $white-color;
+      transition: all 0.2s linear;
+    }
+
+    &:hover {
+      use {
+        fill: $secondary-color;
+      }
+    }
+  }
+}
+// Images
+$list: first, second, third, fourth, fifth, sixth;
+
+@include projects-image($list);

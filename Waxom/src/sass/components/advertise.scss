@@ -2,26 +2,26 @@
   padding-top: 42px;
   background-color: #fbfaf8;
   text-align: center;
-
-  &__title {
-    @include md(font-size, 20px);
-    font-family: $raleway-font;
-    font-weight: 400;
-    font-size: 30px;
-    margin-bottom: 18px;
-  }
-
-  &__description {
-    @include md(padding, 0 100px);
-    @include md(padding, 0);
-    font-family: $montserrat-font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 2;
-    padding: 0 200px;
-  }
 }
 
+.section__title {
+  @include md(font-size, 20px);
+  font-family: $raleway-font;
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.section__description {
+  @include md(padding, 0 100px);
+  @include md(padding, 0);
+  font-family: $montserrat-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  padding: 0 200px;
+  color: $main-color;
+}
 // BROWSER IMAGE
 
 .browser {
