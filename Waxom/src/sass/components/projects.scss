@@ -110,6 +110,7 @@
     }
     // TRIANGLE
     &::before {
+      @include xs(top, -36%);
       content: '';
       display: block;
       width: 0;
@@ -147,3 +148,17 @@
 $list: first, second, third, fourth, fifth, sixth;
 
 @include projects-image($list);
+// MOBILE
+@include to(320px) {
+  .project__image {
+    height: 138px;
+  }
+
+  .project__text::before {
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fbfaf8;
+    top: -18%;
+  }
+}
