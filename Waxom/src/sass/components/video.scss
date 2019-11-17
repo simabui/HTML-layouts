@@ -1,0 +1,41 @@
+.section-video {
+  padding: 100px 0;
+  @include bg-image('../images/video/video-back.png', $pos: 0 0);
+  background-color: rgba(9, 9, 9, 0.5);
+  background-blend-mode: darken;
+}
+
+// PLAYER
+.player {
+  text-align: center;
+  color: $white-color;
+
+  // BUTTON
+  &__button {
+    @include bg-image('../images/video/player.png', $size: 70px);
+    border-radius: 50%;
+    border-color: transparent;
+    outline: none;
+    background-color: rgba(87, 90, 96, 0.5);
+    width: 86px;
+    height: 86px;
+    cursor: pointer;
+  }
+
+  .section__title {
+    margin-top: 22px;
+  }
+
+  .section__description {
+    color: $white-color;
+    padding: 0 290px;
+  }
+
+  &__timer {
+    display: block;
+    font-weight: 900;
+    margin-top: 20px;
+    color: #c9cbd5;
+    opacity: 0.7;
+  }
+}
