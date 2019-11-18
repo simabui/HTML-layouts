@@ -17,6 +17,7 @@
 
     &-title {
       @include md(font-size, 20px);
+      @include xs(font-size, 18px);
       font-size: 28px;
       color: $white-color;
       font-weight: 400;

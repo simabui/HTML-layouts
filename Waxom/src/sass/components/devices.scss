@@ -1,0 +1,78 @@
+.devices {
+  @include row-flex();
+  @include md(padding-top, 20px);
+  padding-top: 60px;
+
+  // IMAGE
+  &__image {
+    @include col();
+    @include size(5);
+    @include size-md(6);
+    @include size-xs(12);
+    @include bg-image('../images/iphone.png', $size: contain);
+    @include md(height, 520px);
+    height: 616px;
+  }
+
+  // TEXT
+  &__text {
+    @include col();
+    @include size(7);
+    @include size-md(6);
+    @include size-xs(12);
+    @include center-flex();
+    @include sm(margin-top, 20px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include md(font-size, 20px);
+    font-family: $raleway-font;
+    font-weight: 700;
+    font-size: 30px;
+    color: $main-color;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    @include md(font-size, 14px);
+    @include md(padding, 0);
+    font-family: $montserrat-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #8c8c8c;
+    margin-bottom: 20px;
+    padding-right: 30px;
+  }
+
+  // LIST
+  &__list {
+    font-family: $raleway-font;
+    font-weight: 400;
+  }
+
+  &__item {
+    @include md(font-size, 14px);
+    @include sm(line-height, 2);
+    font-size: 16px;
+    line-height: 2;
+    color: #8c8c8c;
+
+    &::before {
+      @include md(margin-right, 20px);
+      content: '>';
+      width: 22px;
+      height: 22px;
+      font-weight: 700;
+      color: $white-color;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $secondary-color;
+      border-radius: 50%;
+      margin-right: 44px;
+    }
+  }
+}

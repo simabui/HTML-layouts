@@ -27,6 +27,7 @@
 .browser {
   margin-top: 30px;
   @include row-flex();
+  @include sm(padding-bottom, 20px);
   position: relative;
 
   &__image {
