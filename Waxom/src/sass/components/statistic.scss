@@ -1,0 +1,73 @@
+.section-statistic {
+  background: linear-gradient(to right, #251d1b, #4b3226);
+  padding: 60px 0;
+}
+
+// STATISTIC
+
+.statistic {
+  &_item {
+    @include row-flex();
+    justify-content: space-between;
+  }
+
+  &__list {
+    @include col();
+    @include size-lg(3);
+    @include size-sm(6);
+    @include size-xs(12);
+    @include lg(margin-top, 20px);
+    @include sm(margin-top, 20px);
+    @include xs(margin-top, 40px);
+    text-align: center;
+
+    // PSEUDO LINE
+    &::after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 31px;
+      background-color: $white-color;
+      margin: 29px auto 0 auto;
+    }
+  }
+
+  &__image {
+    width: 45px;
+    height: 45px;
+
+    use {
+      fill: $secondary-color;
+    }
+  }
+
+  &__number {
+    @include sm(font-size, 28px);
+    @include sm(margin-left, 10px);
+    font-family: $montserrat-font;
+    font-weight: 400;
+    font-size: 48px;
+    color: $white-color;
+    margin: 11px 0;
+  }
+
+  &__title {
+    font-family: $raleway-font;
+    font-weight: 400;
+    color: $secondary-color;
+    text-transform: uppercase;
+  }
+}
+
+@include to(520px) {
+  .statistic__flex {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .statistic__image {
+    width: 32px;
+    height: 32px;
+  }
+}

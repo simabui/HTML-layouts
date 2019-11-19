@@ -1,0 +1,21 @@
+mixin statistic-list(number, title, link)
+  li.statistic__list
+    .statistic__flex
+      svg.statistic__image
+        use(href=`images/icons/sprite.svg#${link}`)
+      p.statistic__number
+        =number
+    p.statistic__title  
+      =title
+
+section.section-statistic
+  h2.visually-hidden Statistic
+  .container
+    .statistic
+      ul.statistic_item
+        +statistic-list('3587','Satisfied Clients','clients')
+        +statistic-list('207','Cups of coffee','coffee')
+        +statistic-list('2500','Blog posts','posts')
+        +statistic-list('873','Likes','likes')
+        +statistic-list('900','We launched','launches')
+
