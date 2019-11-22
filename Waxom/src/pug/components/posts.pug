@@ -1,0 +1,22 @@
+mixin post(imageOrder)
+  li.posts__item
+    .posts__image(class=`posts__image-${imageOrder}`)
+      .calendar
+        .calendar__date 30
+        .calendar__month Sep.
+    .posts__text
+      .posts__title Lorem ipsum dolor sit amet
+      .posts__description
+        | Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+      a(href="#").posts__link Read More    
+
+section.section-posts
+  .container
+    .section__title Recent Posts.
+    .section__description.
+      Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+      Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+    ul.posts
+      +post('first')
+      +post('second')
+      +post('third')
