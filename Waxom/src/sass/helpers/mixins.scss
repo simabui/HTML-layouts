@@ -60,3 +60,9 @@
     }
   }
 }
+
+@mixin retina-image() {
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}

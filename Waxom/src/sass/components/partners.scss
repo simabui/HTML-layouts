@@ -1,0 +1,32 @@
+.section-partners {
+  @include bg-image('../images/mountainview.png');
+  padding: 140px 0;
+  @include md(padding, 70px 0);
+  @include sm(padding, 40px 0);
+  background-color: #777;
+  background-blend-mode: multiply;
+}
+
+.partner {
+  @include row-flex();
+
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    @include col();
+    @include size-sm(6);
+    @include size-xs(12);
+  }
+
+  &__image {
+    margin: 10px auto;
+    @include xs(margin, 20px auto);
+  }
+}
+
+@include retina-image() {
+  .section-partners {
+    background-image: url('../images/mountainview@2x.png');
+  }
+}

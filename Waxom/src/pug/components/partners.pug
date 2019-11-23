@@ -1,0 +1,11 @@
+.section.section-partners
+  h2.visually-hidden About Partners
+  .container
+    ul.partner
+      each num in [1,2,3,4]
+        li.partner__list
+          img(src=`images/partners/partner-${num}.png`, alt=`partner-${num}`, class="partner__image"
+          srcset=`images/partners/partner-${num}.png 210w,\
+            images/partners/partner-${num}-medium.png 157w,\
+            images/partners/partner-${num}-small.png 105w`,
+          sizes="210px")
