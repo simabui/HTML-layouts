@@ -4,11 +4,18 @@ mixin post(imageOrder)
       .calendar
         .calendar__date 30
         .calendar__month Sep.
+      .bullets
+        span.bullets__page
+        span.bullets__page
+        span.bullets__page
+        span.bullets__page
+        span.bullets__page    
     .posts__text
       .posts__title Lorem ipsum dolor sit amet
       .posts__description
         | Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
-      a(href="#").posts__link Read More    
+      a(href="#").posts__link Read More
+
 
 section.section-posts
   .container
@@ -20,3 +27,6 @@ section.section-posts
       +post('first')
       +post('second')
       +post('third')
+    .switcher
+      a(href="#").switcher__item.switcher-left <
+      a(href="#").switcher__item.switcher-right >  
