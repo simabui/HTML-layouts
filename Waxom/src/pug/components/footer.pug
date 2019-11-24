@@ -1,19 +1,73 @@
-div.wrapper
-  div.row
-    div.location
-      p.location__title
-        | Location
-      p.location__desctiption
-        | 3481 Melrose Place
-        br
-        | Beverly Hills, CA 90210
-    div.links
-      p.links__title
-        | Share with love
-      //used social block mixin
-      +social
-    div.download
-      p.download__title
-        | download activebox
-      button(type="button").download__button
-        | download here
+mixin post-news(text)
+  .footer__posts
+    p.footer__date
+      | September 08, 2015
+    p.footer__text
+      =text
+
+
+section.section-footer
+  .container
+    .footer
+      .footer__item
+        a.logo(href="#")
+          svg.logo__icon
+            use(href="images/icons/sprite.svg#logos")
+          .logo__text Waxom
+        p.footer__text.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+          nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
+        a(href="#").posts__link Read More 
+      .footer__item
+        h2.footer__title Recent Posts
+        +post-news('Lorem ipsum dolor sit amet, consectetuer adipiscing elit')
+        +post-news('Diam nonummy nibh euismod tincidunt ut laoreet dolore magna')
+        +post-news('Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima')
+      .footer__item.footer__social
+        h2.footer__title Our Twitter
+        .footer__posts
+          p.footer__text
+            span @waxom
+            |  Cum soluta nobis eleifend option congue nihil imperdiet doming
+          p.footer__date
+            | 3 mins ago
+        .footer__posts
+          p.footer__text
+            | Mirum est 
+            span #envato
+            |  notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum
+          p.footer__date
+            | 20 days ago
+        .footer__posts
+          p.footer__text.
+            Soluta nobis option bit.ly/1Hniso7
+          p.footer__date
+            | 20 days ago
+      .footer__item
+        h2.footer__title Dribbble Widget
+        ul.gallery
+          each num in [1,2,3,4]
+            li
+              img(src=`images/widgets/widget-${num}.jpeg`, alt=`widget-${num}` class="gallery__list")
+.footer-div
+  .container
+    .second-footer
+      ul.second-footer__links
+        li.second-footer__link
+          |Copyright © 2015 
+          span Waxom
+        li.second-footer__link
+          a(href="#") Privacy Policy   
+        li.second-footer__link
+          a(href="#") FAQ   
+        li.second-footer__link
+          a(href="#") Support   
+      .owners
+        ul.second-footer__links
+          li.second-footer__link
+            | Designed by
+            span ThemeFire
+          li.second-footer__link
+            | Only on 
+            span Envato Market

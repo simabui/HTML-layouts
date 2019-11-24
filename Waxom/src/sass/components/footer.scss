@@ -1,0 +1,165 @@
+.section-footer {
+  padding: 40px 0;
+  background-color: #191919;
+  font-family: $montserrat-font;
+}
+
+.footer {
+  @include row-flex();
+
+  .logo {
+    @include xs(justify-content, center);
+    margin: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    @include col();
+    @include size(3);
+    @include size-sm(6);
+    @include size-xs(12);
+    padding-right: 27px;
+    @include sm(padding-right, 0);
+    @include xs(text-align, center);
+
+    &:first-child {
+      padding-right: 50px;
+      @include sm(padding-right, 0);
+    }
+  }
+  // CONTENT
+  &__posts:not(:last-child) {
+    border-bottom: 1px solid #252525;
+  }
+
+  &__posts {
+    margin-top: 20px;
+
+    &:hover {
+      .footer__date {
+        color: $white-color;
+      }
+
+      .footer__text {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    transition: color 0.2s linear;
+
+    span {
+      color: #01b7e9;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $white-color;
+    margin-bottom: 25px;
+    margin-top: 15px;
+  }
+
+  &__date {
+    font-size: 12px;
+    color: #363636;
+    font-weight: 400;
+    margin-bottom: 8px;
+    transition: color 0.2s linear;
+  }
+
+  &__social {
+    .footer__text {
+      margin-bottom: 11px;
+    }
+
+    .footer__date {
+      margin-bottom: 22px;
+    }
+  }
+
+  .posts__link {
+    color: $white-color;
+
+    &::after {
+      border-left-color: $white-color;
+    }
+  }
+}
+
+// GALLERY
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 131px);
+  grid-gap: 6px;
+
+  &__list {
+    width: 131px;
+    height: 99px;
+  }
+}
+
+// SECOND FOOTER
+.footer-div {
+  padding: 23px 0;
+  background-color: #111111;
+}
+
+.second-footer {
+  @include sm(display, block);
+  display: flex;
+  justify-content: space-between;
+
+  &__links {
+    display: flex;
+    @include sm(justify-content, center);
+    @include xs(display, block);
+    @include xs(text-align, center);
+  }
+
+  &__link {
+    font-size: 13px;
+
+    a {
+      color: #555555;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-left: 5px;
+
+      &::before {
+        @include xs(display, none);
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        background-color: #363636;
+        margin-right: 5px;
+      }
+    }
+
+    span {
+      color: $white-color;
+    }
+  }
+}
+@include from-to(960px, 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 100px);
+
+    &__list {
+      width: 100px;
+      height: 83px;
+    }
+  }
+}

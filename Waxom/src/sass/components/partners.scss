@@ -16,7 +16,6 @@
   &__list {
     @include col();
     @include size-sm(6);
-    @include size-xs(12);
   }
 
   &__image {
