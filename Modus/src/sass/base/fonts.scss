@@ -2,9 +2,14 @@
   Montserrat,
   normal,
   400,
-  '../fonts/raleway-v14-latin-regular'
+  '../fonts/montserrat-v14-latin-regular'
 );
-@include font-face(Montserrat, normal, 700, '../fonts/raleway-v14-latin-700');
+@include font-face(
+  Montserrat,
+  normal,
+  700,
+  '../fonts/montserrat-v14-latin-700'
+);
 @include font-face(
   'Crimson Text',
   normal,
