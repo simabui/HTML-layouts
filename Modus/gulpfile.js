@@ -28,7 +28,7 @@ var settings = {
   offset: '30px' /* gutter width px || % || rem */,
   mobileFirst: false /* mobileFirst ? 'min-width' : 'max-width' */,
   container: {
-    maxWidth: '1170px' /* max-width оn very large screen */,
+    maxWidth: '1183px' /* max-width оn very large screen */,
     fields: '0' /* side fields */,
   },
   breakPoints: {
