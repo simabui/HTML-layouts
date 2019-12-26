@@ -11,6 +11,15 @@ header {
   background-color: rgba(9, 9, 9, 0.9);
 }
 
+.header-fixed {
+  position: fixed;
+  top: -10px;
+  width: 1211px;
+  background-color: rgba(46, 44, 44, 0.701);
+  z-index: 1000;
+  transition: all 0.2s ease;
+  padding: 10px 0;
+}
 // LOGO
 .logo {
   @include col();
@@ -49,7 +58,7 @@ header {
     justify-content: space-around;
   }
 
-  &__item a {
+  &__item {
     @include md(font-size, 11px);
     font-family: $raleway-font;
     font-weight: 400;
@@ -57,7 +66,7 @@ header {
     transition: color 0.2s linear;
   }
 
-  &__item a:hover {
+  &__item:hover {
     color: $secondary-color;
   }
 }
@@ -92,6 +101,9 @@ header {
   }
 }
 
+.isActive {
+  color: $secondary-color;
+}
 // RETINA
 @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
   header {

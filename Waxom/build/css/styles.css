@@ -518,6 +518,16 @@ header .row {
   align-items: center;
 }
 
+.header-fixed {
+  position: fixed;
+  top: -10px;
+  width: 1211px;
+  background-color: rgba(46, 44, 44, 0.701);
+  z-index: 1000;
+  transition: all 0.2s ease;
+  padding: 10px 0;
+}
+
 .logo {
   box-sizing: border-box;
   word-wrap: break-word;
@@ -557,14 +567,14 @@ header .row {
   justify-content: space-around;
 }
 
-.navigation__item a {
+.navigation__item {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   color: #ffffff;
   transition: color 0.2s linear;
 }
 
-.navigation__item a:hover {
+.navigation__item:hover {
   color: #c7b299;
 }
 
@@ -593,6 +603,10 @@ header .row {
 
 .shop__link:hover svg {
   fill: #c7b299;
+}
+
+.isActive {
+  color: #c7b299;
 }
 
 .slider {
@@ -1627,7 +1641,7 @@ header .row {
     width: calc(58.33333% - 30px);
   }
 
-  .navigation__item a {
+  .navigation__item {
     font-size: 11px;
   }
 
