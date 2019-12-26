@@ -1005,42 +1005,42 @@ header .row {
 }
 
 .first-image {
-  background-image: url("/images/projects/first-photo.png");
+  background-image: url("../images/projects/first-photo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .second-image {
-  background-image: url("/images/projects/second-photo.png");
+  background-image: url("../images/projects/second-photo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .third-image {
-  background-image: url("/images/projects/third-photo.png");
+  background-image: url("../images/projects/third-photo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .fourth-image {
-  background-image: url("/images/projects/fourth-photo.png");
+  background-image: url("../images/projects/fourth-photo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .fifth-image {
-  background-image: url("/images/projects/fifth-photo.png");
+  background-image: url("../images/projects/fifth-photo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .sixth-image {
-  background-image: url("/images/projects/sixth-photo.png");
+  background-image: url("../images/projects/sixth-photo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

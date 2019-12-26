@@ -56,7 +56,7 @@
 @mixin projects-image($list) {
   @each $image in $list {
     .#{$image}-image {
-      @include bg-image('/images/projects/#{$image}-photo.png');
+      @include bg-image('../images/projects/#{$image}-photo.png');
     }
   }
 }
