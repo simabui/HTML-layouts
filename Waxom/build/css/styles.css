@@ -494,8 +494,8 @@ input[type='”radio”'].visually-hidden {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 h1 {
@@ -562,8 +562,8 @@ header .row {
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
   justify-content: space-around;
 }
 
@@ -581,8 +581,8 @@ header .row {
 .shop {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 15px;
@@ -777,8 +777,8 @@ header .row {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
   position: relative;
 }
 
@@ -816,8 +816,8 @@ header .row {
 .purchase {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .purchase__text {
@@ -893,8 +893,8 @@ header .row {
 .project {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
   margin-top: 20px;
 }
 
@@ -1095,8 +1095,8 @@ header .row {
 .devices {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
   padding-top: 60px;
 }
 
@@ -1177,8 +1177,8 @@ header .row {
 .statistic_item {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
   justify-content: space-between;
 }
 
@@ -1232,8 +1232,8 @@ header .row {
 .posts {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
   margin-top: 22px;
   margin-bottom: 30px;
 }
@@ -1406,8 +1406,8 @@ header .row {
 .partner {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1432,8 +1432,8 @@ header .row {
 .footer {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .footer .logo {
