@@ -1,2 +1,7 @@
 .container
-  .logo
+  .header-section
+    .logo
+      img(src="images/logo/logo.png" class="logo__image")
+    nav.navigation
+      each n in ['home', 'portfolio','services', 'clients','contact']
+        a(href=`#${n}` class="navigation__list")=n

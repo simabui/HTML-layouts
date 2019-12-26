@@ -1,0 +1,34 @@
+.header-section {
+  @include row-flex();
+  padding: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  @include col();
+  @include size(3);
+  @include size-xl(6);
+}
+
+.navigation {
+  @include col();
+  @include size(6);
+  @include size-xl(6);
+  @include md(display, none);
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    text-transform: uppercase;
+    font-family: $montserrat-font;
+    font-weight: 400;
+    font-size: 13px;
+    color: $nav-color;
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $background-color;
+    }
+  }
+}

@@ -37,6 +37,9 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
 .visually-hidden:not(:focus):not(:active),
 input[type='”checkbox”'].visually-hidden,
 input[type='”radio”'].visually-hidden {

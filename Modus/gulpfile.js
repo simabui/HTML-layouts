@@ -32,6 +32,9 @@ var settings = {
     fields: '0' /* side fields */,
   },
   breakPoints: {
+    xl: {
+      width: '1183px',
+    },
     lg: {
       width: '1100px' /* -> @media (max-width: 1100px) */,
     },
