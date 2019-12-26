@@ -28,7 +28,75 @@
     transition: color 0.2s linear;
 
     &:hover {
-      color: $background-color;
+      color: $hover-color;
     }
+  }
+}
+
+.section-home {
+  background-color: $background-color;
+  padding-top: 127px;
+  padding-bottom: 132px;
+  position: relative;
+}
+
+.creativity {
+  text-align: center;
+  color: $white-color;
+  font-family: $montserrat-font;
+  font-weight: 400;
+
+  &__title {
+    font-size: 50px;
+  }
+
+  &__title-sub {
+    font-size: 15px;
+  }
+
+  &__theme {
+    margin-left: 15px;
+  }
+}
+
+.button {
+  @extend %button;
+  background-color: transparent;
+  padding: 12px 30px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  transition: background-color 0.2s linear;
+  margin-top: 26px;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+.triangle {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 16px solid $hover-color;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 12px solid $background-color;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 12px solid transparent;
+    position: absolute;
+    top: -15px;
+    left: -9px;
   }
 }
