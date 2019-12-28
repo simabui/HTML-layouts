@@ -1,5 +1,6 @@
 .section-history {
-  padding: 73px 0 0 76px;
+  @include md(padding, 40px 0);
+  padding: 73px 0 76px 0;
   background-color: $section-color;
 }
 
@@ -40,6 +41,7 @@
   }
 
   &__description {
+    @include sm(padding, 0);
     font-family: $crimson-font;
     font-size: 15px;
     font-weight: 400;

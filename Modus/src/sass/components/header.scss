@@ -48,18 +48,21 @@
 
   &__title {
     font-size: 50px;
+    @include sm(font-size, 30px);
   }
 
   &__title-sub {
     font-size: 15px;
+    @include sm(font-size, 13px);
   }
 
   &__theme {
     margin-left: 15px;
   }
 }
-
+// BUTTON
 .button {
+  @include xs(padding, 7px 15px);
   @extend %button;
   background-color: transparent;
   padding: 12px 30px;
@@ -85,6 +88,7 @@
   position: absolute;
   bottom: 10px;
   left: 50%;
+  transform: translateX(-50%);
 
   &::before {
     content: '';
