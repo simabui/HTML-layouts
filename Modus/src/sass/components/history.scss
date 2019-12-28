@@ -1,0 +1,50 @@
+.section-history {
+  padding: 73px 0 0 76px;
+  background-color: $section-color;
+}
+
+.section {
+  text-align: center;
+
+  &__title {
+    font-family: $montserrat-font;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 51px;
+    position: relative;
+
+    // blue line
+    &::after {
+      content: '';
+      display: block;
+      width: 94px;
+      height: 2px;
+      background-color: $hover-color;
+      margin: 31px auto 0 auto;
+    }
+
+    // blue rombe
+    &::before {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      background-color: $white-color;
+      border: 2px solid $hover-color;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 49%;
+      bottom: -5px;
+    }
+  }
+
+  &__description {
+    font-family: $crimson-font;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $text-color;
+    padding: 0 210px;
+  }
+}
