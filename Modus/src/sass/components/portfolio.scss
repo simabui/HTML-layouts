@@ -1,0 +1,93 @@
+.portfolio {
+  @include row-flex();
+
+  &__list {
+    @include col();
+    @include size(4);
+    @include size-md(6);
+    @include size-sm(12);
+
+    background-color: $background-color;
+    color: $white-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 555px;
+    position: relative;
+  }
+
+  &__num {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: $crimson-font;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  // portfolio
+  &__block {
+    text-align: center;
+    padding: 70px 37px 0 37px;
+    position: relative;
+    display: none;
+    z-index: 2;
+
+    // BLUE BLOCK
+    &::after {
+      content: '';
+      display: block;
+      background-color: $hover-color;
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      left: 0;
+    }
+  }
+
+  &__title {
+    font-family: $montserrat-font;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 63px;
+  }
+
+  &__description {
+    font-family: $crimson-font;
+    font-weight: 400;
+    font-size: 15px;
+    color: $white-color;
+    margin-bottom: 54px;
+  }
+}
+
+// ICONS
+.social {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    fill: $white-color;
+    transition: fill 0.2s linear;
+
+    &:hover {
+      fill: #ff0000;
+    }
+
+    &-facebook {
+      width: 10px;
+      height: 20px;
+    }
+
+    &-twitter {
+      width: 19px;
+      height: 16px;
+      margin-left: 30px;
+    }
+  }
+}

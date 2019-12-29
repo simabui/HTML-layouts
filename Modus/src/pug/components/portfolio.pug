@@ -1,0 +1,27 @@
+mixin portfolio(num)
+  .portfolio__list
+    p.portfolio__num
+      | work #{num}
+    .portfolio__block
+      p.portfolio__title random artwork
+      p.portfolio__description.
+        Vivamus suscipit tortor eget felis porttitor 
+        volutpat. Vestibulum ac diam sit amet 
+        quam vehicula elementum sed sit amet dui. 
+        Pellentesque in ipsum id orci. 
+      .social
+        a.social__logo(href="#")
+          svg.social__icon.social__icon-facebook
+            use(href="images/icons/sprite.svg#facebook")
+        a.social__logo(href="#")
+          svg.social__icon.social__icon-twitter
+            use(href="images/icons/sprite.svg#twitter")
+
+section.section-portfolio#portfolio
+  .container
+    h1.visually-hidden About works
+    .portfolio
+      +portfolio(1)
+      +portfolio(2)
+      +portfolio(3)
+
