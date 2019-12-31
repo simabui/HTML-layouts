@@ -1,0 +1,77 @@
+.section-services {
+  background-color: $section-color;
+  padding: 73px 0;
+}
+
+.services {
+  @include row-flex();
+
+  &__list {
+    @include col();
+    @include size(4);
+    @include size-sm(6);
+    @include size-xs(12);
+    @include sm(margin-bottom, 10px);
+    @include xs(padding, 20px);
+    text-align: center;
+    background-color: $white-color;
+    padding: 59px 42px 73px 49px;
+  }
+
+  &__icon {
+    margin-bottom: 24px;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 31px;
+      background-color: $hover-color;
+      margin: 17px auto 0 auto;
+    }
+  }
+
+  &__title {
+    @include sm(margin-bottom, 20px);
+    @include xs(font-size, 13px);
+    font-family: $montserrat-font;
+    font-weight: 400;
+    font-size: 15px;
+    color: #231f20;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 37px;
+  }
+
+  &__description {
+    @include xs(font-size, 13px);
+    font-family: $crimson-font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: $nav-color;
+  }
+}
+
+.icon {
+  &-pencil {
+    @include xs(width, 30px);
+    @include xs(height, 30px);
+    width: 48px;
+    height: 47px;
+  }
+
+  &-socket {
+    @include xs(width, 30px);
+    @include xs(height, 30px);
+    width: 54px;
+    height: 48px;
+  }
+
+  &-pc {
+    @include xs(width, 30px);
+    @include xs(height, 30px);
+    width: 46px;
+    height: 46px;
+  }
+}

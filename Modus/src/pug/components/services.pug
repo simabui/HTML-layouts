@@ -1,0 +1,19 @@
+mixin service(icon,iconClass,title)
+  .services__list
+    .services__icon
+      svg(class=`icon-${iconClass}`)
+        use(href=`images/icons/sprite.svg#service-${icon}`)
+    p.services__title
+      =title
+    p.services__description.
+      Vivamus suscipit tortor eget felis porttitor 
+      volutpat. Vestibulum ac diam sit amet 
+      quam vehicula elementum sed sit amet dui. 
+      Pellentesque in ipsum id orci. 
+
+section.section-services#services
+  .container
+    .services
+      +service(1,'pencil','idea')
+      +service(2,'socket','work')
+      +service(3,'pc','deliver')
