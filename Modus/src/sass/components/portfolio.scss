@@ -15,27 +15,24 @@
     height: 555px;
     position: relative;
 
-    // BLUE BLOCK
-    &::after {
-      content: '';
-      display: block;
-      background-color: $hover-color;
-      position: absolute;
-      width: 100%;
-      bottom: 0px;
-      left: 0;
-      transition: all 0.2s linear;
-    }
-
     // HOVER portfolio
     &:hover {
       .portfolio__block {
-        display: block;
         z-index: 2;
+        height: 430px;
+        background-color: $hover-color;
       }
 
-      &::after {
-        top: 150px;
+      .portfolio__title {
+        display: block;
+      }
+
+      .portfolio__description {
+        display: block;
+      }
+
+      .social {
+        display: block;
       }
     }
   }
@@ -57,7 +54,9 @@
     padding: 70px 37px 0 37px;
     position: relative;
     display: none;
-    transition: display 0.2s linear;
+    height: 0;
+    transition: height 0.2s ease;
+    display: block;
   }
 
   &__title {
@@ -67,14 +66,17 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 63px;
+    display: none;
   }
 
   &__description {
     font-family: $crimson-font;
     font-weight: 400;
     font-size: 15px;
+    line-height: 1.8;
     color: $white-color;
     margin-bottom: 54px;
+    display: none;
   }
 }
 
@@ -84,13 +86,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
 
   &__icon {
     fill: $white-color;
     transition: fill 0.2s linear;
 
     &:hover {
-      fill: #ff0000;
+      fill: $background-color;
     }
 
     &-facebook {
