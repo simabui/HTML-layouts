@@ -1,0 +1,49 @@
+.section-contact {
+  background-color: $background-color;
+  padding: 28px 0;
+}
+
+.contact {
+  @include row-flex();
+
+  &__bio {
+    @include col();
+    @include size(6);
+    padding: 48px 73px 75px;
+    color: $white-color;
+    border: 1px solid $nav-color;
+    text-align: center;
+
+    .contact__title::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 36px;
+      background-color: $hover-color;
+      margin: 33px auto 0;
+    }
+  }
+
+  &__block {
+    @include col();
+    @include size(6);
+    padding: 48px 36px 71px 41px;
+    border: 1px solid $nav-color;
+    color: $white-color;
+  }
+
+  &__title {
+    font-family: $montserrat-font;
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  &__description {
+    font-family: $crimson-font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
