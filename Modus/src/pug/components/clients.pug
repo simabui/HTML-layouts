@@ -6,3 +6,6 @@ section.section-clients#clients
         “Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. 
         Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit”
       span.section__description-sub Mr.Lorem Ipsum
+    .clients
+      each n in [1,2,3,4]
+        img(src=`images/clients/partner-${n}.png`, srcset=`images/clients/partner-${n}.png 1x, images/clients/partner-${n}@2x.png 2x` ,alt=`partner-${n}`)
