@@ -59,3 +59,9 @@ input[type='”radio”'].visually-hidden {
 .container {
   @include wrapper();
 }
+
+button {
+  @extend %button;
+  border: none;
+  display: block;
+}

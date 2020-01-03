@@ -13,8 +13,9 @@ section.section-contact#contact
       .contact__block
         .contact__form
           h2.contact__title contact us
-          span email
-          input(type="email" id="email")
-          span message
+          span.contact__name email
+          input(type="email" id="email" autocomplete="off")
+          span.contact__name(style="margin-top: 45px") message
           input(type="text" id="message" autocomplete="off")
+          input(type="text" id="message" autocomplete="off" style="margin-top: 26px")
           button.button-form send

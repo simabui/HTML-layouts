@@ -6,6 +6,19 @@
 .contact {
   @include row-flex();
 
+  &__form {
+    input {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $white-color;
+      outline: none;
+      color: $white-color;
+      font-family: $montserrat-font;
+      font-size: 15px;
+    }
+  }
+
   &__bio {
     @include col();
     @include size(6);
@@ -38,6 +51,7 @@
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 50px;
+    text-align: center;
   }
 
   &__description {
@@ -46,4 +60,24 @@
     font-size: 15px;
     line-height: 1.5;
   }
+
+  &__name {
+    font-family: $montserrat-font;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 23px;
+  }
+}
+
+.button-form {
+  font-family: $montserrat-font;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: $hover-color;
+  background-color: transparent;
+  float: right;
+  margin-top: 36px;
 }
