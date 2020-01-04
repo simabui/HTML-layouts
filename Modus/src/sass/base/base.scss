@@ -62,6 +62,4 @@ input[type='”radio”'].visually-hidden {
 
 button {
   @extend %button;
-  border: none;
-  display: block;
 }

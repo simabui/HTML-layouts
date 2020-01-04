@@ -22,12 +22,15 @@
   &__bio {
     @include col();
     @include size(6);
+    @include size-xs(12);
+    @include sm(padding, 48px 14px 26px);
     padding: 48px 73px 75px;
     color: $white-color;
     border: 1px solid $nav-color;
     text-align: center;
 
     .contact__title::after {
+      @include xs(margin-top, 20px);
       content: '';
       display: block;
       height: 1px;
@@ -40,12 +43,19 @@
   &__block {
     @include col();
     @include size(6);
+    @include size-xs(12);
+    @include sm(padding, 48px 25px 34px);
+    @include xs(padding, 48px 25px 10px);
+    @include xs(margin-top, 10px);
     padding: 48px 36px 71px 41px;
     border: 1px solid $nav-color;
     color: $white-color;
   }
 
   &__title {
+    @include sm(margin-bottom, 25px);
+    @include sm(font-size, 20px);
+    @include xs(font-size, 15px);
     font-family: $montserrat-font;
     font-size: 25px;
     font-weight: 400;
@@ -55,6 +65,7 @@
   }
 
   &__description {
+    @include sm(font-size, 13px);
     font-family: $crimson-font;
     font-weight: 400;
     font-size: 15px;
@@ -62,6 +73,8 @@
   }
 
   &__name {
+    @include sm(font-size, 13px);
+    @include sm(margin-bottom, 10px);
     font-family: $montserrat-font;
     font-size: 15px;
     font-weight: 400;
@@ -72,6 +85,8 @@
 }
 
 .button-form {
+  @include xs(margin-top, 20px);
+  @include xs(font-size, 13px);
   font-family: $montserrat-font;
   font-weight: 400;
   font-size: 15px;
@@ -80,4 +95,7 @@
   background-color: transparent;
   float: right;
   margin-top: 36px;
+  border: none;
+  display: block;
+  outline: none;
 }
