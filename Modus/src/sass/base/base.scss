@@ -63,3 +63,11 @@ input[type='”radio”'].visually-hidden {
 button {
   @extend %button;
 }
+
+.isFixed {
+  position: fixed;
+  background-color: $white-color;
+  width: 1183px;
+  z-index: 999;
+  transition: all 0.2s ease;
+}
