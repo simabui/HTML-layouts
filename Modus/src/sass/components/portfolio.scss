@@ -95,6 +95,10 @@
   justify-content: center;
   display: none;
 
+  &__logo:not(:first-child) {
+    margin-left: 30px;
+  }
+
   &__icon {
     fill: $white-color;
     transition: fill 0.2s linear;
@@ -111,7 +115,6 @@
     &-twitter {
       width: 19px;
       height: 16px;
-      margin-left: 30px;
     }
   }
 }

@@ -1,0 +1,26 @@
+.section-footer {
+  padding: 42px 0 47px 0;
+  background-color: $hover-color;
+}
+
+.footer {
+  @include row-flex();
+  @include xs(justify-content, center);
+  justify-content: space-between;
+
+  &__links {
+    font-family: $montserrat-font;
+    font-weight: 400;
+    font-size: 13px;
+    color: $white-color;
+  }
+
+  &__social {
+    @include xs(margin-top, 10px);
+  }
+}
+
+.social__icon-dribble {
+  width: 19px;
+  height: 20px;
+}
