@@ -1,5 +1,5 @@
 .overlay
-  div.create-form
+  form.create-form(autocomplete="off")
     p.create-form__title Title:
     input(class="create-form__input" type="text" name="title" placeholder="title")
     p.create-form__title Description:
@@ -9,5 +9,5 @@
       option(value="high") High
       option(value="normal") Normal
       option(value="low") Low
-    button(class="create-form__cancel") Cancel
-    button(class="create-form__save") Save
+    button(class="create-form__cancel" id="cancel") Cancel
+    button(class="create-form__save" id="save") Save
