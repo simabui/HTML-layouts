@@ -1,15 +1,23 @@
 "use strict";
 import "./../sass/styles.scss";
 import "./createNote.js";
-import { obj, refs } from "./createNote.js";
+import { obj } from "./createNote.js";
 
-refs.create.addEventListener("click", handleDisplay);
+export const refs = {
+  create: document.querySelector("#button-create"),
+  overlay: document.querySelector(".overlay"),
+  cancel: document.querySelector("#cancel"),
+  save: document.querySelector("#save"),
+  createForm: document.querySelector(".create-form"),
+  list: document.querySelector("#task-list")
+};
+
+refs.create.addEventListener("click", handleOverlay);
 refs.overlay.addEventListener("click", handleCancel);
 refs.save.addEventListener("click", handleCreate);
 
-function handleDisplay(e) {
+function handleOverlay(e) {
   e.preventDefault();
-
   refs.overlay.classList.add("is-open");
 }
 
@@ -18,7 +26,6 @@ function handleCancel(e) {
   if (e.target === e.currentTarget || e.target === refs.cancel) {
     closeOverlay();
   }
-
   return false;
 }
 
@@ -32,5 +39,6 @@ function handleCreate(e) {
   const description = refs.createForm.elements.description.value;
   const priority = refs.createForm.priority.value;
   obj.renderTemplate(input, description, priority);
+  refs.createForm.reset();
   closeOverlay();
 }
