@@ -11,6 +11,9 @@
   align-items: center;
   display: none;
 }
+.is-open {
+  display: flex;
+}
 .create-form {
   border: 1px solid #000;
   max-width: 300px;
