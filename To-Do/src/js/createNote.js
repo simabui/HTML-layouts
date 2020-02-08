@@ -1,4 +1,4 @@
-const refs = {
+export const refs = {
   create: document.querySelector("#button-create"),
   overlay: document.querySelector(".overlay"),
   cancel: document.querySelector("#cancel"),
@@ -7,48 +7,30 @@ const refs = {
   list: document.querySelector("#task-list")
 };
 
-refs.create.addEventListener("click", handleDisplay);
-refs.overlay.addEventListener("click", handleCancel);
-refs.save.addEventListener("click", handleCreate);
+export const obj = {
+  collection: [],
 
-function handleDisplay(e) {
-  e.preventDefault();
-
-  refs.overlay.classList.add("is-open");
-}
-
-function handleCancel(e) {
-  e.preventDefault();
-  if (e.target === e.currentTarget || e.target === refs.cancel) {
-    closeOverlay();
-  }
-
-  return false;
-}
-
-function closeOverlay() {
-  refs.overlay.classList.remove("is-open");
-}
-
-function handleCreate(e) {
-  e.preventDefault();
-  const input = refs.createForm.elements.title.value;
-  const description = refs.createForm.elements.description.value;
-  const priority = refs.createForm.priority.value;
-  const test = createTemplate(input, description, priority);
-  console.log(input);
-  // if (input || description === "") {
-  //   alert("Fill title and description before Save");
-  //   return;
-  // }
-  refs.list.insertAdjacentHTML("beforeend", test);
-  closeOverlay();
-}
-
-function createTemplate(title, description, priority) {
-  return `<div class="note">
-    <h2>${title}</h2>
-    <p>${description}</p>
-    <div>${priority}</div>
+  renderTemplate(title, desc, prio) {
+    const template = `<div class="note">
+    <h2 class="note__title">${title}</h2>
+    <p class="note__description">${desc}</p>
+    <div class="note__priority">${prio}</div>
   </div>`;
+    refs.list.insertAdjacentHTML("beforeend", template);
+    this.collection.push(template);
+  }
+};
+// console.log(input);
+// if (input || description === "") {
+//   alert("Fill title and description before Save");
+//   return;
+// }
+//test = createTemplate(input, description, priority)
+
+function createTemplate(title, desc, prio) {
+  return `<div class="note">
+  <h2 class="note__title">${title}</h2>
+  <p class="note__description">${desc}</p>
+  <div class="note__priority">${prio}</div>
+</div>`;
 }
