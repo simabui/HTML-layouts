@@ -1,0 +1,22 @@
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.44);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.create-form {
+  border: 1px solid #000;
+  max-width: 300px;
+  padding: 20px 40px;
+  background-color: #fff;
+  &__select {
+    width: 100%;
+  }
+}

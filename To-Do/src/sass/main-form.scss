@@ -1,0 +1,13 @@
+.todo {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+
+  &__select {
+    width: 100px;
+    border-radius: unset;
+  }
+
+  &__button {
+  }
+}
