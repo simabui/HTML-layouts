@@ -11,7 +11,8 @@ export const refs = {
   save: document.querySelector("#save"),
   createForm: document.querySelector(".create-form"),
   list: document.querySelector("#task-list"),
-  taskStatus: document.querySelector("#task-status")
+  taskStatus: document.querySelector("#task-status"),
+  taskPrio: document.querySelector("#task-priority")
 };
 
 refs.create.addEventListener("click", handleOverlay);
@@ -19,7 +20,8 @@ refs.overlay.addEventListener("click", handleCancel);
 refs.save.addEventListener("click", handleCreate);
 refs.list.addEventListener("click", handleOptions);
 refs.inputSearch.addEventListener("input", handleInput);
-refs.taskStatus.addEventListener("change", test);
+refs.taskStatus.addEventListener("change", handleStatus);
+refs.taskPrio.addEventListener("change", handlePrio);
 
 function handleOverlay(e) {
   e.preventDefault();
@@ -93,7 +95,12 @@ function handleInput() {
   obj.filterInput(title);
 }
 
-function test() {
+function handleStatus() {
   const status = refs.taskStatus.value;
   obj.filterStatus(status);
+}
+
+function handlePrio() {
+  const prio = refs.taskPrio.value;
+  obj.filterPrio(prio);
 }

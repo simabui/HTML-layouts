@@ -36,6 +36,13 @@ export const obj = {
     obj.status = "done";
   },
 
+  // filtered arr and render
+  renderFiltered(arr) {
+    const newItems = arr.reduce((acc, item) => acc + buildTemplate(item), "");
+    refs.list.innerHTML = "";
+    this.renderTemplate(newItems);
+  },
+
   //filter by input
   filterInput(val) {
     const newCollection = this.collection.filter(note => {
@@ -47,6 +54,7 @@ export const obj = {
     this.renderFiltered(newCollection);
   },
 
+  //filter by status
   filterStatus(status) {
     const newCollection = this.collection.filter(note => {
       if (status === "all") {
@@ -57,11 +65,17 @@ export const obj = {
 
     this.renderFiltered(newCollection);
   },
-  // filtered arr and render
-  renderFiltered(arr) {
-    const newItems = arr.reduce((acc, item) => acc + buildTemplate(item), "");
-    refs.list.innerHTML = "";
-    this.renderTemplate(newItems);
+
+  //filter by prio
+  filterPrio(prio) {
+    const newCollection = this.collection.filter(note => {
+      if (prio === "all") {
+        return note;
+      }
+      return note.prio === prio;
+    });
+
+    this.renderFiltered(newCollection);
   }
 };
 
@@ -72,7 +86,7 @@ function buildTemplate(obj) {
     <h2 class="note__title">${obj.title}</h2>
     <p class="note__description">${obj.desc}</p>
     <div class="note__block">
-      <span class="note__priority">${obj.prio}</span>
+      <span class="note__priority note__priority-${obj.prio}">${obj.prio}</span>
       <div class="note__option">
       <span>...</span>
       <ul class="note__additional">
