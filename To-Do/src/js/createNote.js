@@ -5,7 +5,7 @@ export const obj = {
 
   renderTemplate(title, desc, prio) {
     const template = `
-    <div class="note">
+    <div class="note" data-status>
       <h2 class="note__title">${title}</h2>
       <p class="note__description">${desc}</p>
       <div class="note__block">
@@ -13,16 +13,16 @@ export const obj = {
         <div class="note__option">
         <span>...</span>
         <ul class="note__additional">
-        <li class="note__list note__top">done</li>
-        <li class="note__list">edit</li>
-        <li class="note__list">delete</li>
+        <li class="note__list note__top" data-type="done">done</li>
+        <li class="note__list" data-type="edit">edit</li>
+        <li class="note__list" data-type="delete">delete</li>
       </ul>
         </div>
       </div>
     </div>`;
-
     refs.list.insertAdjacentHTML("beforeend", template);
     this.collection.push({
+      id: this.collection.length + 1,
       title,
       desc,
       prio
@@ -30,9 +30,3 @@ export const obj = {
     console.log(this.collection);
   }
 };
-
-// console.log(input);
-// if (input || description === "") {
-//   alert("Fill title and description before Save");
-//   return;
-// }
