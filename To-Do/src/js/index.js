@@ -4,6 +4,7 @@ import "./createNote.js";
 import { obj } from "./createNote.js";
 
 export const refs = {
+  inputSearch: document.querySelector("#task-search"),
   create: document.querySelector("#button-create"),
   overlay: document.querySelector(".overlay"),
   cancel: document.querySelector("#cancel"),
@@ -16,12 +17,14 @@ refs.create.addEventListener("click", handleOverlay);
 refs.overlay.addEventListener("click", handleCancel);
 refs.save.addEventListener("click", handleCreate);
 refs.list.addEventListener("click", handleOptions);
+refs.inputSearch.addEventListener("input", test);
 
 function handleOverlay(e) {
   e.preventDefault();
   refs.overlay.classList.add("is-open");
 }
 
+//cancel button
 function handleCancel(e) {
   e.preventDefault();
   if (e.target === e.currentTarget || e.target === refs.cancel) {
@@ -34,6 +37,7 @@ function closeOverlay() {
   refs.overlay.classList.remove("is-open");
 }
 
+//create button
 function handleCreate(e) {
   e.preventDefault();
   const input = refs.createForm.elements.title.value;
@@ -44,7 +48,8 @@ function handleCreate(e) {
     alert("Fill title and description before Save");
     return;
   }
-  obj.renderTemplate(input, description, priority);
+  //render
+  obj.createTemplate(input, description, priority);
   //reset inputs
   refs.createForm.reset();
   closeOverlay();
@@ -76,4 +81,10 @@ function deleteItem(node) {
   node.remove();
   const id = Number(node.dataset.id);
   obj.remove(id);
+}
+
+function test(e) {
+  // e.preventDefault();
+  const title = refs.inputSearch.value;
+  obj.filter(title);
 }
