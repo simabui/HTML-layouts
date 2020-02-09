@@ -49,13 +49,24 @@ function handleCreate(e) {
 }
 
 function handleOptions(e) {
+  const parent = e.target.closest(".note");
+
   if (e.target.dataset.type === "done") {
-    const parent = e.target.closest(".note");
     changeStatus(parent);
+  }
+
+  if (e.target.dataset.type === "delete") {
+    deleteItem(parent);
   }
 }
 
 function changeStatus(node) {
   node.classList.add("done");
   node.dataset.status = "done";
+}
+
+function deleteItem(node) {
+  node.remove();
+  const id = Number(node.dataset.id);
+  obj.remove(id);
 }

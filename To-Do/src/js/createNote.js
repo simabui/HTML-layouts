@@ -28,6 +28,9 @@ export const obj = {
     </div>`;
 
     refs.list.insertAdjacentHTML("beforeend", template);
-    console.log(this.collection);
+  },
+
+  remove(id) {
+    this.collection = this.collection.filter(note => note.id !== id);
   }
 };
