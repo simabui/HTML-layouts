@@ -1,4 +1,5 @@
 import { refs } from "./index.js";
+import { saveToLocal } from "./local.js";
 
 export const obj = {
   collection: [],
@@ -19,16 +20,18 @@ export const obj = {
 
     this.pushtoCollection(noteList);
     const item = buildTemplate(noteList);
-    this.renderTemplate(item);
+    this.insertTemplate(item);
+    saveToLocal();
   },
 
-  renderTemplate(element) {
+  insertTemplate(element) {
     refs.list.insertAdjacentHTML("beforeend", element);
   },
 
   //remove button
   remove(id) {
     this.collection = this.collection.filter(note => note.id !== id);
+    saveToLocal();
   },
   // add status to obj
   setStatus(el) {
@@ -37,10 +40,10 @@ export const obj = {
   },
 
   // filtered arr and render
-  renderFiltered(arr) {
+  renderFromTemplate(arr) {
     const newItems = arr.reduce((acc, item) => acc + buildTemplate(item), "");
     refs.list.innerHTML = "";
-    this.renderTemplate(newItems);
+    this.insertTemplate(newItems);
   },
 
   //filter by input
@@ -51,7 +54,7 @@ export const obj = {
       }
     });
 
-    this.renderFiltered(newCollection);
+    this.renderFromTemplate(newCollection);
   },
 
   //filter by status
@@ -63,7 +66,7 @@ export const obj = {
       return note.status === status;
     });
 
-    this.renderFiltered(newCollection);
+    this.renderFromTemplate(newCollection);
   },
 
   //filter by prio
@@ -75,12 +78,12 @@ export const obj = {
       return note.prio === prio;
     });
 
-    this.renderFiltered(newCollection);
+    this.renderFromTemplate(newCollection);
   }
 };
 
 //template
-function buildTemplate(obj) {
+export function buildTemplate(obj) {
   return `
   <div class="note" data-status="${obj.status}" data-id="${obj.id}">
     <h2 class="note__title">${obj.title}</h2>
