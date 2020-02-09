@@ -39,11 +39,13 @@ function handleCreate(e) {
   const input = refs.createForm.elements.title.value;
   const description = refs.createForm.elements.description.value;
   const priority = refs.createForm.priority.value;
+
   if (input.length === 0 || description.length === 0) {
     alert("Fill title and description before Save");
     return;
   }
   obj.renderTemplate(input, description, priority);
+  //reset inputs
   refs.createForm.reset();
   closeOverlay();
 }
@@ -56,6 +58,11 @@ function handleOptions(e) {
   }
 
   if (e.target.dataset.type === "delete") {
+    deleteItem(parent);
+  }
+
+  if (e.target.dataset.type === "edit") {
+    handleOverlay(e);
     deleteItem(parent);
   }
 }

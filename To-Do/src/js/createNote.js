@@ -26,11 +26,12 @@ export const obj = {
         </div>
       </div>
     </div>`;
-
+    console.log(this.collection);
     refs.list.insertAdjacentHTML("beforeend", template);
   },
 
   remove(id) {
     this.collection = this.collection.filter(note => note.id !== id);
+    console.log(this.collection);
   }
 };
