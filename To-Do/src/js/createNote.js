@@ -10,7 +10,7 @@ export const obj = {
   //create obj,push to arr and render
   createTemplate(title, desc, prio) {
     const noteList = {
-      id: this.collection.length,
+      id: Date.now(),
       title,
       desc,
       prio
@@ -27,7 +27,7 @@ export const obj = {
   //template
   buildTemplate(obj) {
     return `
-    <div class="note" data-status="" data-id="${this.collection.length}">
+    <div class="note" data-status="" data-id="${obj.id}">
       <h2 class="note__title">${obj.title}</h2>
       <p class="note__description">${obj.desc}</p>
       <div class="note__block">
