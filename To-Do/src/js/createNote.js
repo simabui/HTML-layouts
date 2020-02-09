@@ -4,8 +4,14 @@ export const obj = {
   collection: [],
 
   renderTemplate(title, desc, prio) {
+    this.collection.push({
+      id: this.collection.length + 1,
+      title,
+      desc,
+      prio
+    });
     const template = `
-    <div class="note" data-status>
+    <div class="note" data-status="" data-id="${this.collection.length}">
       <h2 class="note__title">${title}</h2>
       <p class="note__description">${desc}</p>
       <div class="note__block">
@@ -20,13 +26,8 @@ export const obj = {
         </div>
       </div>
     </div>`;
+
     refs.list.insertAdjacentHTML("beforeend", template);
-    this.collection.push({
-      id: this.collection.length + 1,
-      title,
-      desc,
-      prio
-    });
     console.log(this.collection);
   }
 };
