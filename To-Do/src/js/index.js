@@ -50,6 +50,12 @@ function handleCreate(e) {
 
 function handleOptions(e) {
   if (e.target.dataset.type === "done") {
-    console.log("yes");
+    const parent = e.target.closest(".note");
+    changeStatus(parent);
   }
+}
+
+function changeStatus(node) {
+  node.classList.add("done");
+  node.dataset.status = "done";
 }
