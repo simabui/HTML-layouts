@@ -10,14 +10,16 @@ export const refs = {
   cancel: document.querySelector("#cancel"),
   save: document.querySelector("#save"),
   createForm: document.querySelector(".create-form"),
-  list: document.querySelector("#task-list")
+  list: document.querySelector("#task-list"),
+  taskStatus: document.querySelector("#task-status")
 };
 
 refs.create.addEventListener("click", handleOverlay);
 refs.overlay.addEventListener("click", handleCancel);
 refs.save.addEventListener("click", handleCreate);
 refs.list.addEventListener("click", handleOptions);
-refs.inputSearch.addEventListener("input", test);
+refs.inputSearch.addEventListener("input", handleInput);
+refs.taskStatus.addEventListener("change", test);
 
 function handleOverlay(e) {
   e.preventDefault();
@@ -55,6 +57,7 @@ function handleCreate(e) {
   closeOverlay();
 }
 
+// set option
 function handleOptions(e) {
   const parent = e.target.closest(".note");
 
@@ -84,8 +87,13 @@ function deleteItem(node) {
   obj.remove(id);
 }
 
-function test(e) {
-  // e.preventDefault();
+//filter input
+function handleInput() {
   const title = refs.inputSearch.value;
-  obj.filter(title);
+  obj.filterInput(title);
+}
+
+function test() {
+  const status = refs.taskStatus.value;
+  obj.filterStatus(status);
 }
