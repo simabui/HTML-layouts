@@ -73,7 +73,8 @@ function handleOptions(e) {
 }
 
 function changeStatus(node) {
-  node.classList.add("done");
+  const id = Number(node.dataset.id);
+  obj.setStatus(id);
   node.dataset.status = "done";
 }
 

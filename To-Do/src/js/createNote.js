@@ -15,7 +15,7 @@ export const obj = {
       desc,
       prio
     };
-    console.log(this.collection);
+
     this.pushtoCollection(noteList);
     const item = this.buildTemplate(noteList);
     this.renderTemplate(item);
@@ -27,7 +27,7 @@ export const obj = {
   //template
   buildTemplate(obj) {
     return `
-    <div class="note" data-status="" data-id="${obj.id}">
+    <div class="note" data-status="${obj.status}" data-id="${obj.id}">
       <h2 class="note__title">${obj.title}</h2>
       <p class="note__description">${obj.desc}</p>
       <div class="note__block">
@@ -61,5 +61,12 @@ export const obj = {
     );
     refs.list.innerHTML = "";
     this.renderTemplate(newItems);
+  },
+
+  // add status to obj
+  setStatus(el) {
+    const obj = this.collection.find(note => note.id === el);
+    obj.status = "done";
+    console.log(this.collection);
   }
 };
