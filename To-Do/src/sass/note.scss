@@ -1,7 +1,7 @@
 .task-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 20px;
 }
 .note {
@@ -11,12 +11,17 @@
   border-radius: 5px;
   padding: 20px;
   position: relative;
+  margin-bottom: 10px;
+
+  &[data-status="done"] {
+    background-color: #6dc46dac;
+  }
 
   span {
+    border: 1px solid #000;
     display: inline-block;
     margin-top: 30px;
     padding: 10px;
-    border: 1px dashed #000;
     border-radius: 5px;
   }
 
@@ -25,9 +30,22 @@
     justify-content: space-between;
   }
 
+  &__title {
+    font-weight: 700;
+  }
+
+  &__description,
+  &__title {
+    font-family: $raleway-font;
+    word-wrap: break-word;
+  }
   &__option {
     position: relative;
     cursor: pointer;
+
+    span {
+      background-color: #fff;
+    }
 
     &:hover {
       .note__additional {
@@ -69,6 +87,21 @@
       border-right: 10px solid transparent;
       border-bottom: 10px solid #000;
       border-left: 10px solid transparent;
+    }
+  }
+
+  .note__priority {
+    border: 1px dashed #000;
+    &-high {
+      background-color: #f246468a;
+    }
+
+    &-normal {
+      background-color: #f2b23b9a;
+    }
+
+    &-low {
+      background-color: #008000a8;
     }
   }
 }

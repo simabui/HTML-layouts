@@ -84,7 +84,7 @@ function buildTemplate(obj) {
   return `
   <div class="note" data-status="${obj.status}" data-id="${obj.id}">
     <h2 class="note__title">${obj.title}</h2>
-    <p class="note__description">${obj.desc}</p>
+    <div class="note__description">${obj.desc}</div>
     <div class="note__block">
       <span class="note__priority note__priority-${obj.prio}">${obj.prio}</span>
       <div class="note__option">
