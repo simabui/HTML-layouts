@@ -1,11 +1,13 @@
 import { refs } from "./index.js";
-import { saveToLocal } from "./local.js";
+import { saveToLocal, saveLocalToArr } from "./local.js";
+
+export let collection = [];
 
 export const obj = {
-  collection: [],
+  // collection: [],
 
   pushtoCollection(obj) {
-    this.collection.push(obj);
+    collection.push(obj);
   },
 
   //create obj,push to arr and render
@@ -30,13 +32,15 @@ export const obj = {
 
   //remove button
   remove(id) {
-    this.collection = this.collection.filter(note => note.id !== id);
+    collection = collection.filter(note => note.id !== id);
     saveToLocal();
   },
   // add status to obj
   setStatus(el) {
-    const obj = this.collection.find(note => note.id === el);
+    const obj = collection.find(note => note.id === el);
+    //change status in obj
     obj.status = "done";
+    saveToLocal();
   },
 
   // filtered arr and render
@@ -48,7 +52,7 @@ export const obj = {
 
   //filter by input
   filterInput(val) {
-    const newCollection = this.collection.filter(note => {
+    const newCollection = collection.filter(note => {
       if (note.title.includes(val)) {
         return note;
       }
@@ -59,7 +63,7 @@ export const obj = {
 
   //filter by status
   filterStatus(status) {
-    const newCollection = this.collection.filter(note => {
+    const newCollection = collection.filter(note => {
       if (status === "all") {
         return note;
       }
@@ -71,7 +75,7 @@ export const obj = {
 
   //filter by prio
   filterPrio(prio) {
-    const newCollection = this.collection.filter(note => {
+    const newCollection = collection.filter(note => {
       if (prio === "all") {
         return note;
       }
@@ -101,3 +105,5 @@ export function buildTemplate(obj) {
     </div>
   </div>`;
 }
+
+saveLocalToArr();

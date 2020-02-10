@@ -80,6 +80,7 @@ function handleOptions(e) {
 function changeStatus(node) {
   const id = Number(node.dataset.id);
   obj.setStatus(id);
+  // set background-color to done
   node.dataset.status = "done";
 }
 
@@ -89,7 +90,7 @@ function deleteItem(node) {
   obj.remove(id);
 }
 
-//filter input
+//filter form
 function handleInput() {
   const title = refs.inputSearch.value;
   obj.filterInput(title);
