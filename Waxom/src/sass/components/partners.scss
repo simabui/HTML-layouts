@@ -23,9 +23,3 @@
     @include xs(margin, 20px auto);
   }
 }
-
-@include retina-image() {
-  .section-partners {
-    background-image: url('../images/mountainview@2x.png');
-  }
-}

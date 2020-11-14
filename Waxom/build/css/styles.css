@@ -2030,18 +2030,3 @@ header .row {
     height: 83px;
   }
 }
-
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  header {
-    background-image: url("../images/mountain@2x.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .section-partners {
-    background-image: url("../images/mountainview@2x.png");
-  }
-}

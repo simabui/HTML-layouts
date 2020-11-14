@@ -104,9 +104,3 @@ header {
 .isActive {
   color: $secondary-color;
 }
-// RETINA
-@media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  header {
-    @include bg-image('../images/mountain@2x.png');
-  }
-}
