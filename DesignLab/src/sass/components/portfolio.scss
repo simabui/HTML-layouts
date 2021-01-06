@@ -1,0 +1,54 @@
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  @include sm-block() {
+    grid-template-columns: repeat(3, 50%);
+  }
+  @include xs-block() {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  &__img {
+    height: 240px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+
+    @include sm-block() {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-topworks {
+      background-image: url("../images/portfolio/topwork.jpg");
+    }
+    &-joint {
+      background-image: url("../images/portfolio/joint.jpg");
+    }
+    &-market {
+      background-image: url("../images/portfolio/market.jpg");
+    }
+    &-worktop {
+      background-image: url("../images/portfolio/worktop.jpg");
+    }
+    &-lable {
+      background-image: url("../images/portfolio/lable.jpg");
+    }
+    &-city {
+      background-image: url("../images/portfolio/city.jpg");
+    }
+  }
+  &__text {
+    font-family: $lato-font;
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 10px;
+  }
+}

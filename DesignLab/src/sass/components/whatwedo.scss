@@ -1,0 +1,48 @@
+.service-works {
+  padding: 100px 0;
+}
+
+.we {
+  @extend %fieldset;
+  @include xs-block() {
+    padding: 30px 20px;
+  }
+
+  &__title {
+    @extend %legend;
+    color: $font-color;
+  }
+
+  &__desc {
+    @extend %fieldset-text;
+    color: $font-color;
+    margin-bottom: 0;
+
+    &-title {
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: $font-color;
+      text-transform: uppercase;
+      @include xs(font-size, 18px);
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  &__icon {
+    fill: $font-color;
+    width: 80px;
+    height: 83px;
+
+    @include xs-block {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

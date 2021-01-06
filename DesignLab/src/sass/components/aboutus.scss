@@ -1,0 +1,23 @@
+.about-company {
+  padding: 130px 0;
+
+  @include xs-block() {
+    padding: 50px 0;
+  }
+}
+
+.aboutus {
+  @extend %fieldset;
+  border-color: $font-color;
+
+  &__title {
+    @extend %legend;
+    color: $font-color;
+  }
+
+  &__desc,
+  &__desc2 {
+    @extend %fieldset-text;
+    color: $font-color;
+  }
+}

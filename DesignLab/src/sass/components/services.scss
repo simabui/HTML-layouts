@@ -1,0 +1,22 @@
+.service-company {
+  background-image: url("../images/back2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 130px 0;
+}
+.service {
+  @extend %fieldset;
+  border-color: #fff;
+
+  &__title {
+    @extend %legend;
+    color: #fff;
+  }
+
+  &__desc,
+  &__desc2 {
+    @extend %fieldset-text;
+    color: #fff;
+  }
+}

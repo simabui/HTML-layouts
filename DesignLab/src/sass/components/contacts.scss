@@ -1,0 +1,38 @@
+.service-contacts {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.contacts {
+  @extend %fieldset;
+  @include xs-block() {
+    padding: 30px 20px;
+  }
+
+  &__title {
+    @extend %legend;
+    color: $font-color;
+  }
+
+  &__desc {
+    @extend %fieldset-text;
+    padding: 0 15px;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    background-color: #3c3c3c;
+    font-family: $lato-font;
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-align: center;
+    min-width: 395px;
+    height: 58px;
+    color: #fff;
+    cursor: pointer;
+
+    @include sm-block {
+      font-size: 16px;
+    }
+  }
+}

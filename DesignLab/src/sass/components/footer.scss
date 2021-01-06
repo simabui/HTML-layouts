@@ -1,0 +1,17 @@
+footer {
+  padding: 10px 0;
+}
+.section-footer {
+  width: 340px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.license {
+  font-family: $lato-font;
+  font-weight: 400;
+  color: $font-color;
+  font-size: 14px;
+}
